@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		C2E99E341A5951ED00C4C0B0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2E99E331A5951ED00C4C0B0 /* main.cpp */; };
+		C2E99E3C1A59520B00C4C0B0 /* datetime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2E99E3A1A59520B00C4C0B0 /* datetime.cpp */; };
+		C2E99E411A59558800C4C0B0 /* options_file.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2E99E3D1A59558800C4C0B0 /* options_file.cpp */; };
+		C2E99E421A59558800C4C0B0 /* str.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2E99E3F1A59558800C4C0B0 /* str.cpp */; };
+		C2E99E451A595BF400C4C0B0 /* mail_message.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2E99E431A595BF400C4C0B0 /* mail_message.cpp */; };
+		C2E99E4B1A5983F700C4C0B0 /* pop3_adaptor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2E99E4A1A5983F700C4C0B0 /* pop3_adaptor.cpp */; };
+		C2E99E4E1A59897000C4C0B0 /* container.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2E99E4C1A59897000C4C0B0 /* container.cpp */; };
+		C2E99E511A59ADF800C4C0B0 /* mail_inteface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2E99E4F1A59ADF800C4C0B0 /* mail_inteface.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +32,20 @@
 /* Begin PBXFileReference section */
 		C2E99E301A5951ED00C4C0B0 /* mail_protocol */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = mail_protocol; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2E99E331A5951ED00C4C0B0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C2E99E3A1A59520B00C4C0B0 /* datetime.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = datetime.cpp; sourceTree = "<group>"; };
+		C2E99E3B1A59520B00C4C0B0 /* datetime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = datetime.h; sourceTree = "<group>"; };
+		C2E99E3D1A59558800C4C0B0 /* options_file.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = options_file.cpp; sourceTree = "<group>"; };
+		C2E99E3E1A59558800C4C0B0 /* options_file.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = options_file.h; sourceTree = "<group>"; };
+		C2E99E3F1A59558800C4C0B0 /* str.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = str.cpp; sourceTree = "<group>"; };
+		C2E99E401A59558800C4C0B0 /* str.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = str.h; sourceTree = "<group>"; };
+		C2E99E431A595BF400C4C0B0 /* mail_message.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mail_message.cpp; sourceTree = "<group>"; };
+		C2E99E441A595BF400C4C0B0 /* mail_message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mail_message.h; sourceTree = "<group>"; };
+		C2E99E491A5983D400C4C0B0 /* pop3_adaptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pop3_adaptor.h; sourceTree = "<group>"; };
+		C2E99E4A1A5983F700C4C0B0 /* pop3_adaptor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pop3_adaptor.cpp; sourceTree = "<group>"; };
+		C2E99E4C1A59897000C4C0B0 /* container.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = container.cpp; sourceTree = "<group>"; };
+		C2E99E4D1A59897000C4C0B0 /* container.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = container.h; sourceTree = "<group>"; };
+		C2E99E4F1A59ADF800C4C0B0 /* mail_inteface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mail_inteface.cpp; sourceTree = "<group>"; };
+		C2E99E501A59ADF800C4C0B0 /* mail_inteface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mail_inteface.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +78,21 @@
 		C2E99E321A5951ED00C4C0B0 /* mail_protocol */ = {
 			isa = PBXGroup;
 			children = (
+				C2E99E491A5983D400C4C0B0 /* pop3_adaptor.h */,
+				C2E99E4A1A5983F700C4C0B0 /* pop3_adaptor.cpp */,
+				C2E99E3D1A59558800C4C0B0 /* options_file.cpp */,
+				C2E99E3E1A59558800C4C0B0 /* options_file.h */,
+				C2E99E3F1A59558800C4C0B0 /* str.cpp */,
+				C2E99E401A59558800C4C0B0 /* str.h */,
 				C2E99E331A5951ED00C4C0B0 /* main.cpp */,
+				C2E99E3A1A59520B00C4C0B0 /* datetime.cpp */,
+				C2E99E3B1A59520B00C4C0B0 /* datetime.h */,
+				C2E99E431A595BF400C4C0B0 /* mail_message.cpp */,
+				C2E99E441A595BF400C4C0B0 /* mail_message.h */,
+				C2E99E4C1A59897000C4C0B0 /* container.cpp */,
+				C2E99E4D1A59897000C4C0B0 /* container.h */,
+				C2E99E4F1A59ADF800C4C0B0 /* mail_inteface.cpp */,
+				C2E99E501A59ADF800C4C0B0 /* mail_inteface.h */,
 			);
 			path = mail_protocol;
 			sourceTree = "<group>";
@@ -118,7 +153,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2E99E3C1A59520B00C4C0B0 /* datetime.cpp in Sources */,
+				C2E99E4B1A5983F700C4C0B0 /* pop3_adaptor.cpp in Sources */,
+				C2E99E421A59558800C4C0B0 /* str.cpp in Sources */,
+				C2E99E511A59ADF800C4C0B0 /* mail_inteface.cpp in Sources */,
 				C2E99E341A5951ED00C4C0B0 /* main.cpp in Sources */,
+				C2E99E411A59558800C4C0B0 /* options_file.cpp in Sources */,
+				C2E99E4E1A59897000C4C0B0 /* container.cpp in Sources */,
+				C2E99E451A595BF400C4C0B0 /* mail_message.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
