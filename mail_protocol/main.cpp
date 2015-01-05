@@ -13,7 +13,7 @@ using namespace std;
 
 int main(int argc, const char * argv[]) {
     
-    MailInterface m("Example2.txt");
+    MailInterface m("Example.txt");
     m.run();
     return 0;
 }

@@ -17,7 +17,7 @@ DateTime::DateTime() : _day(0) , _month(0) , _year(0) , _hour(0) , _minute(0) , 
 }
 DateTime::DateTime( const Str st )
 {
-    if ( st.get_length() < 15 )
+    if ( st.get_length() < 14 )
     {
         cout << " invalid datetime string " << endl ;
         exit(1);

@@ -14,7 +14,8 @@ Options_File::Options_File(const char* filename) : _f(filename)
 
 bool Options_File::read_line()
 {
-    if (!_f.getline(_buffer, OP_N)) { return false; }
+    if (_f.eof()) { return false; }
+    _f.getline(_buffer, OP_N);
     if (_buffer[0] == '#' || _buffer[0] == '\n' || _buffer[0] == '\r') { return read_line(); }
     
     _parameter_count = 1;
@@ -31,8 +32,14 @@ bool Options_File::read_line()
     _parameters = new Str[_parameter_count];
     
     int len = 0, start = 0, p = 0;
+    bool started = false;
     for (int j = 0; _buffer[j] != '\0' && _buffer[j] != '\r'; j++) {
         if (_buffer[j] == ',') {
+            int k = j-1;
+            while(_buffer[k]==' ') {
+                k--;
+                len--;
+            }
             char *tmp = new char[len+1];
             for (int i = 0; i < len; i++)
             {
@@ -45,8 +52,12 @@ bool Options_File::read_line()
             len = 0;
             start = j + 1;
             p++;
+            started = false;
             delete[] tmp;
+        } else if (!started && _buffer[j] == ' '){
+            start++;
         } else {
+            started = true;
             len++;
         }
     }

@@ -12,7 +12,7 @@
 #include <iostream>
 
 
-template <typename T> class Container {
+template <class T> class Container {
     int _len;
     T* _cont;
     int *_ids;
@@ -21,9 +21,9 @@ template <typename T> class Container {
 public:
     
     Container();
-    void add_item (int id, T& item );
-    T& get_item ( int id );
-    T& get_item_by_index(int i);
+    void add_item (int id, T item );
+    T* get_item ( int id );
+    T get_item_by_index(int i);
     int get_len ();
     void delete_all();
     ~Container();

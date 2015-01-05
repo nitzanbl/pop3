@@ -27,6 +27,7 @@ void MailInterface::run()
     cout << "6 - RSET " << endl;
     cout << "7 - Quit " << endl ;
     
+        
     int x;
     cin >> x ;
         switch (x) {
@@ -43,7 +44,6 @@ void MailInterface::run()
                 else
                 {
                     cout<< " invalid user name or password " << endl ;
-                    return ;
                 }
             }
                 break;

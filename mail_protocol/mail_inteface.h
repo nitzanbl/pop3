@@ -22,14 +22,7 @@ public:
     MailInterface(const char* file_name);
     void run();
     ~MailInterface();
-  /*
-    Authenticate ()
-    Get Mail Status ().
-    Get Mails List ( List Command ).
-    Get One Mail (Retr Command ).
-    Delete mail ( Dele Command).
-    RSET ( RSET Command).
-    Quit ( Quit Command + Exit the Program ).*/
 };
+
 
 #endif /* defined(__mail_protocol__mail_inteface__) */

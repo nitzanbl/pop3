@@ -10,7 +10,7 @@
 using namespace std;
 
 
-template <typename T> Container<T>::Container()
+template <class T> Container<T>::Container()
 {
     _len=0;
     _cont = new T[20];
@@ -21,7 +21,7 @@ template <typename T> Container<T>::Container()
 
 }
 
-template <typename T> void Container<T>::add_item (int id, T& item )
+template <class T> void Container<T>::add_item (int id, T item )
 {
     if(_len == _size ){
         T* new_cont = new T[2*_size];
@@ -40,39 +40,39 @@ template <typename T> void Container<T>::add_item (int id, T& item )
     }
     _cont[_len] = item ;
     _ids[_len] = id;
-    _len ++;
+    _len++;
     
 }
-template <typename T>  T& Container<T>::get_item ( int id )
+template <class T>  T* Container<T>::get_item ( int id )
 {
     for (int i=0 ; i<_len ; ++i)
     {
         if( _ids[i] == id )
-            return _cont[i];
+            return &_cont[i];
     }
-    return T();
+    return NULL;
 }
-template <typename T> T& Container<T>::get_item_by_index(int i)
+template <class T> T Container<T>::get_item_by_index(int i)
 {
     return _cont[i];
  
 }
-template <typename T> int Container<T>::get_len ()
+template <class T> int Container<T>::get_len ()
 {
     return _len;
 }
-template <typename T> void Container<T>::delete_all()
+template <class T> void Container<T>::delete_all()
 {
     _len=0;
 }
-template <typename T> Container<T>::~Container()
+template <class T> Container<T>::~Container()
 {
     delete[] _cont;
     delete[] _ids;
     cout << " DTOR for container " << endl ;
 }
 
-template <typename T> void Container<T>::delete_item(int id)
+template <class T> void Container<T>::delete_item(int id)
 {
   
     int index_del = -1;

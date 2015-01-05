@@ -24,13 +24,13 @@ Str::Str(int n) {
         
         while (t != 0) {
             _len++;
-            t /= t;
+            t /= 10;
         }
         
         _string = new char[_len+1];
         
         for (int j = 0; j < _len; j++) {
-            _string[_len-1-j] = n%10;
+            _string[_len-1-j] = n%10 + '0';
             n /= 10;
         }
         _string[_len] = '\0';
@@ -58,6 +58,12 @@ void Str::set_str(const Str &str)
     if (_string != 0)
         delete [] _string;
     
+    if (str._string == NULL) {
+        _string = NULL;
+        _len = 0;
+        //return;
+    }
+    
     _len = str._len;
     
     _string = new char[str._len + 1];
@@ -77,7 +83,7 @@ char Str::get_char(int index) const
 void Str::strcpy(const char* new_s)
 {
     int i = 0;
-    while (new_s[i] != '\0')
+    while (i < _len)
     {
         _string[i] = new_s[i];
         i++;
@@ -127,6 +133,12 @@ Str& Str::operator=(const char* st)
     strcpy(st);
     return *this;
     
+}
+
+Str& Str::operator=(const Str & st)
+{
+    set_str(st);
+    return *this;
 }
 
 Str& Str::operator<<(const Str &st) {

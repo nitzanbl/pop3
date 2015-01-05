@@ -27,6 +27,8 @@ public:
     bool equals(const char *str) const;// Returns true if str == _string
     const char* get_string ();
     Str& operator=(const char* st);
+    Str& operator=(const Str & st);
+
     Str& operator<<(const Str &st);
     
     ~Str(); //Dtor

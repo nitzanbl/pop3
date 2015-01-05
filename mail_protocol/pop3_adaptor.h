@@ -6,6 +6,7 @@
 #include "str.h"
 #include "mail_message.h"
 #include "container.h"
+#include "container.cpp"
 #include "datetime.h"
 
 class Pop3Adaptor
@@ -15,6 +16,8 @@ private:
     Str _user;
     Str _pass;
     int _bytes;
+    bool _1authd;
+    bool _2authd;
     Container<int> _delete_items;
 
 public:
