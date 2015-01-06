@@ -14,7 +14,7 @@ template <class T> Container<T>::Container()
 {
     _len=0;
     _cont = new T[20];
-    _ids = new int [20];
+    _ids = new int[20];
     _size = 20;
     
     cout << " CTOR for container " << endl ;

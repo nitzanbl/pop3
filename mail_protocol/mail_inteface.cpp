@@ -19,11 +19,11 @@ void MailInterface::run()
 {
     while( true ){
     cout <<  " plese enter commnd number : " << endl ;
-    cout << " 1 -  Authenticate " << endl ;
-    cout <<  "2 - Get Mail Status" << endl ;
-    cout <<  "3 - Get Mails List " << endl ;
+    cout << "1 - Authenticate " << endl ;
+    cout << "2 - Get Mail Status" << endl ;
+    cout << "3 - Get Mails List " << endl ;
     cout << "4 - Get One Mail " << endl ;
-    cout <<  "5 - Delete mail " << endl ;
+    cout << "5 - Delete mail " << endl ;
     cout << "6 - RSET " << endl;
     cout << "7 - Quit " << endl ;
     

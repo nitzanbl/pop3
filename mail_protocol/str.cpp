@@ -61,7 +61,7 @@ void Str::set_str(const Str &str)
     if (str._string == NULL) {
         _string = NULL;
         _len = 0;
-        //return;
+        return;
     }
     
     _len = str._len;
