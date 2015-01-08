@@ -14,7 +14,7 @@ MailMessage::MailMessage()
 {
     cout<<" CTOR for MailMessage " << endl ;
 }
-MailMessage::MailMessage(MailMessage& m)
+MailMessage::MailMessage(const MailMessage& m)
 {
     *this = m;
     cout<<" copy CTOR for MailMessage " << endl ;

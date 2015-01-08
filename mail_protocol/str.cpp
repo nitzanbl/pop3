@@ -116,7 +116,7 @@ Str Str::get_line (int line )
     return Str(l);
 }
 
-const char* Str::get_string ()
+const char* Str::get_string () const
 {
     return _string;
 }

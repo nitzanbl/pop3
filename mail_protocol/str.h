@@ -25,7 +25,7 @@ public:
     int get_length() const; // Returns the len
     char get_char(int index) const; // Returns the index char from string
     bool equals(const char *str) const;// Returns true if str == _string
-    const char* get_string ();
+    const char* get_string () const;
     Str& operator=(const char* st);
     Str& operator=(const Str & st);
 

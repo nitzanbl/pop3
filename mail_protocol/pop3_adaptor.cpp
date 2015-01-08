@@ -7,8 +7,9 @@
 //
 
 #include "pop3_adaptor.h"
+#include <fstream>
 
-Pop3Adaptor::Pop3Adaptor(const char* file_name )
+Pop3Adaptor::Pop3Adaptor(const char* file_name ): _filename(file_name)
 {
     Options_File f(file_name);
     f.read_line();
@@ -112,6 +113,16 @@ const char* Pop3Adaptor::QUIT()
     {
         _container.delete_item(_delete_items.get_item_by_index(i));
     }
+    
+    ofstream f(_filename.get_string());
+    f<< _user.get_string() <<',' << _pass.get_string() << endl;
+    for ( int i = 0 ; i < _container.get_len() ; ++i )
+    {
+        MailMessage m (_container.get_item_by_index(i));
+        f << m.get_id() << ',' << m.get_from().get_string() << ',' << m.get_to().get_string() << ',' << m.get_date().str_format().get_string() << ',' << m.get_data().get_string() << endl ;
+        
+    }
+    
     return "+OK";
 }
 

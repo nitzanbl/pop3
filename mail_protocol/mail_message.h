@@ -26,7 +26,7 @@ public:
     
     MailMessage();
     MailMessage(int id , Str from , Str to , DateTime d , Str data , int size);
-    MailMessage(MailMessage& m);
+    MailMessage(const MailMessage& m);
     MailMessage( Str& st);
     
     MailMessage& operator= (const MailMessage& m);
